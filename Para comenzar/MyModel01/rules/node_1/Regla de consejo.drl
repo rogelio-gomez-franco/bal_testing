@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Regla de consejo</name>
+  <uuid>ffcea977-f44e-4f10-b2f7-b32e90a0877a</uuid>
+  <locale>es_ES</locale>
+  <definition><![CDATA[si
+	 Nombre está definido
+entonces
+	asignar a decisión "Hola " + Nombre + "! " +  'Consejos meteorológicos' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

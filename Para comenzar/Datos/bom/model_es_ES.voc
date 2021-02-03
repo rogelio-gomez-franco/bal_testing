@@ -1,0 +1,28 @@
+
+# Term: clima
+@clima#article.definite = el
+@clima#article.indefinite = un
+
+# Clima
+Clima#concept.label = clima
+Clima.Clima(boolean,java.lang.Long,Temperatura)#phrase.navigation = un nuevo {clima} en que {0, alerta de tormenta} {1, prevision de lluvia} {2, temperatura}
+Clima.newAttribute#phrase.action[0] = {this} estará alerta de tormenta solo si {alerta de tormenta}
+Clima.newAttribute#phrase.action[1] = cambiar a {alerta de tormenta} el hecho de que {this} es alerta de tormenta
+Clima.newAttribute#phrase.action[1].deprecated = true
+Clima.newAttribute#phrase.navigation = {this} es alerta de tormenta
+Clima.newAttribute#phrase.negative_predicate = {this} no esta alerta de tormenta
+Clima.newAttribute#phrase.negative_predicate_setter = {this} no estará alerta de tormenta
+Clima.newAttribute#phrase.positive_predicate_setter = {this} estará alerta de tormenta
+Clima.previsionDeLluvia#phrase.action = cambiar la previsión de lluvia {this, PARTITIVE_ARTICLE} a {prevision de lluvia}
+Clima.previsionDeLluvia#phrase.addition_setter = añadir {prevision de lluvia} a la previsión de lluvia {this, PARTITIVE_ARTICLE}
+Clima.previsionDeLluvia#phrase.navigation = {prevision de lluvia} {this,PARTITIVE_ARTICLE}
+Clima.previsionDeLluvia#phrase.subtraction_setter = sustraer {prevision de lluvia} de la previsión de lluvia {this, PARTITIVE_ARTICLE}
+Clima.temperatura#phrase.action = cambiar la temperatura {this,PARTITIVE_ARTICLE} a {temperatura}
+Clima.temperatura#phrase.clearer = borrar la temperatura{this,PARTITIVE_ARTICLE}
+Clima.temperatura#phrase.navigation = {temperatura} {this,PARTITIVE_ARTICLE}
+
+# Temperatura
+Temperatura#concept.label = temperatura
+Temperatura.caliente#instance.label = caliente
+Temperatura.frio#instance.label = frio
+Temperatura.templado#instance.label = templado

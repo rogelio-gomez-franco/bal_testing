@@ -1,0 +1,46 @@
+
+
+public class Clima
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "clima"
+        property "de.generated" "true"
+{
+    public boolean newAttribute
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "alerta de tormenta"
+                property update "true";
+    public java.lang.Long previsionDeLluvia
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "prevision de lluvia"
+                property update "true";
+    public Temperatura temperatura
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "temperatura"
+                property update "true";
+    public Clima(boolean newAttribute, java.lang.Long previsionDeLluvia, Temperatura temperatura)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Clima()
+                property "dataio.default" "true";
+}
+
+public class Temperatura
+        extends java.lang.Enum
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "temperatura"
+        property "de.generated" "true"
+{
+    domain {static caliente, static frio, static templado}
+    public static final readonly Temperatura caliente
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "caliente";
+    public static final readonly Temperatura frio
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "frio";
+    public static final readonly Temperatura templado
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "templado";
+}
+

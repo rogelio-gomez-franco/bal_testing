@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>231204e1-08d3-4ac8-9019-8de8834a4826</uuid>
+  <locale>es_ES</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="es_ES"/>
+    </extensionElements>
+    <inputData id="node_0" name="Nombre">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Nombre"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Nombre" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Consejo diario">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Nombre"/>
+                <input bomType="java.lang.String" collection="false" name="Consejos meteorológicos"/>
+                <output bomType="java.lang.String" collection="false" name="Consejo diario"/>
+                <rule defaultRule="false" href="node_1/Regla%20de%20consejo.drl" kind="BusinessRule" name="Regla de consejo"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Consejo diario" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Consejos meteorológicos">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="Clima" collection="false" name="Clima"/>
+                <output bomType="java.lang.String" collection="false" name="Consejos meteorológicos"/>
+                <rule defaultRule="false" href="node_2/regla%20de%20tormenta.drl" kind="BusinessRule" name="regla de tormenta"/>
+                <rule defaultRule="false" href="node_2/Tabla%20de%20clima.dmt" kind="DecisionTable" name="Tabla de clima"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Consejos meteorológicos" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_3" name="Clima">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Clima" collection="false" name="Clima"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Clima" typeRef="Clima"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

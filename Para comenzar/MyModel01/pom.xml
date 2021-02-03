@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>decisioons.rogeliotestbal.para_comenzar</groupId>
+        <artifactId>paraComenzar</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>decisioons.rogeliotestbal.para_comenzar</groupId>
+    <artifactId>myModel01</artifactId>
+    <version>LATEST-SNAPSHOT</version>
+    <packaging>decision-library</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ibm.decision</groupId>
+                <artifactId>build-maven-plugin</artifactId>
+                <configuration>
+                    <deployments>
+                        <deployment>
+                            <name>myModel01</name>
+                        </deployment>
+                    </deployments>
+                <packageName>decisioons.rogeliotestbal.para_comenzar.mymodel01</packageName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+<dependencies>
+        <dependency>
+            <groupId>decisioons.rogeliotestbal.para_comenzar</groupId>
+            <artifactId>datos</artifactId>
+            <type>decision-library</type>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

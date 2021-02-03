@@ -1,0 +1,7 @@
+{
+  "nombre": "Roberto",
+  "clima": {
+    "prevision de lluvia": 100,
+    "temperatura": "caliente"
+  }
+}
