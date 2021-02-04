@@ -1,7 +1,8 @@
 {
   "nombre": "Roberto",
   "clima": {
-    "prevision de lluvia": 60,
-    "temperatura": "frio"
+    "prevision de lluvia": 100,
+    "temperatura": "frio",
+    "alerta de tormenta": false
   }
 }
